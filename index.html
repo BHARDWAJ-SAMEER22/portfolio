@@ -1,0 +1,276 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sameer Bhardwaj | Web Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --card-bg: #fff;
+      --btn-bg: #ffd700;
+      --footer-bg: #111;
+      --accent-color: #2a5298;
+    }body.dark {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --card-bg: #1f1f1f;
+  --btn-bg: #ffd700;
+  --footer-bg: #000;
+  --accent-color: #0077ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+.hero {
+  background: linear-gradient(to right, #1e3c72, var(--accent-color));
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+.typing{
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(20, end) forwards;
+}
+.typing::after{
+  content:'|';
+  animation:blink 0.7s infinite;
+}
+@keyframes blink{
+  0%, 100% {opacity: 1;}
+  50% {opacity: 0;}
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 25px;
+  background: var(--btn-bg);
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+ background: rgba(255,255,255,0.1);
+ backdrop-filter: blur(10px);
+ border: 1px solid rgba(255,255,255,0.2);
+ box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  border: 1px solid #ffd700;
+box-shadow: 0 0 15px #ffd700, 0 0 30px #ffd700;
+transform: translateY(-6px);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+form button {
+  padding: 10px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background: var(--footer-bg);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.social-icons{
+margin-top: 10px;
+}
+.social-icons a{
+  color:#fff;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition:color 0.3s;
+}
+.social-icons a :hover{
+  background-color: #0077ff;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--btn-bg);
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <button id="theme-toggle">🌓</button>
+  <header class="hero">
+    <div class="container">
+      <h1><span class="typing">Sameer Bhardwaj</span></h1>
+      <p> Frontend Web Developer</p>
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="SAMEER BHARDWAJ-Resume.pdf" class="btn" download style ="background: yellow; color:black; margin-left: 15px;"> Download Resume</a>
+    </div>
+  </header>  <section id="about" class="section fade-in">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a passionate Web Developer who persuing a Bachelor's degree in Computer Application. I specialize in creating modern and responsive web applications.</p>
+    </div>
+  </section>  <section id="projects" class="section fade-in">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>A fully responsive personal website to showcase skills and projects.</p>
+        </div>
+        <div class="project-card">
+          <h3>Landing Page</h3>
+          <p>A creative animated landing page using HTML, CSS and JavaScript.</p>
+        </div>
+        <div class="project-card">
+          <h3> Web Calculator</h3>
+          <p>A simple Web Calculator using HTML, CSS and JavaScript.</p>
+        </div>
+      </div>
+    </div>
+  </section>  <section id="contact" class="section fade-in">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section> 
+   <footer>
+    <p>&copy; 2025 Sameer Bhardwaj. All Rights Reserved.</p>
+    <div class="social-icons">
+    <a href="https://github.com/" target="_blank"> <i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/" target="_blank"> <i class="fab fa-linkdin-in"></i></a>
+    </div>
+  </footer> 
+  
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+
+    // Dark Mode Toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script></body>
+</html>
